@@ -80,4 +80,181 @@ section{scroll-margin-top:5.5rem}
 .ai .btn{margin-top:2rem}
 footer{padding:2rem 0 2.5rem;text-align:center;color:var(--muted);font-size:.9rem}
 .social{display:flex;justify-content:center;gap:.9rem}
-.social
+.social a{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;color:var(--ink);
+  border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);transition:background .15s,color .15s,border-color .15s,transform .15s}
+.social a:hover{background:var(--g);color:var(--btn-ink);border-color:var(--g);transform:translateY(-2px)}
+.social svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+@media (max-width:820px){
+  .plans{grid-template-columns:1fr;max-width:26rem;gap:2.25rem}
+  .plan .btn{align-self:stretch}
+}
+@media (max-width:700px){
+  .nav{padding:.45rem .45rem .45rem .9rem;gap:.5rem;justify-content:space-between}
+  .brand{font-size:1.1rem}
+  .brand svg{width:30px;height:30px}
+  .links{margin:0 auto;gap:clamp(.6rem,3vw,1.25rem)}
+  .links a{font-size:.9rem}
+  .nav .btn{margin-left:0;padding:.4rem 1rem;font-size:.85rem}
+}
+@media (max-width:520px){
+  .brand .name{display:none}
+  .links a{font-size:.82rem}
+  .nav .btn{padding:.4rem .85rem;font-size:.8rem;min-height:36px}
+}
+@media (max-width:380px){
+  .nav{gap:.4rem}
+  .links{gap:.55rem}
+  .links a{font-size:.78rem}
+  .nav .btn{padding:.35rem .75rem;font-size:.76rem}
+}
+@media (max-width:355px){
+  .brand{display:none}
+  .nav{padding-left:.9rem}
+  .links{gap:.5rem}
+  .links a{font-size:.76rem}
+  .nav .btn{padding:.35rem .7rem;font-size:.75rem}
+}
+@media (max-width:620px){
+  .grid{grid-template-columns:1fr}
+  .row .btn{width:100%}
+  .nav .btn{width:auto}
+  footer{padding-bottom:2.5rem}
+}
+@media (hover:none){.btn:hover{transform:none;filter:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.tile video{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#12E8F2"/><stop offset="1" stop-color="#0BF27A"/></linearGradient></defs><circle cx="20" cy="20" r="20" fill="url(#lg)"/><path d="M16 12.5v15l12-7.5z" fill="#03140C"/></svg>
+      <span class="name">Primed Studio</span>
+    </a>
+    <div class="links" id="links">
+      <a href="#videos">Portfolio</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <a class="btn" href="#book" data-book>Get Started</a>
+  </nav>
+</div>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1><span>Win the Pitch.</span><span>Acquire more users.</span><span class="grad">Zero struggles</span></h1>
+    <p class="lines">
+      <span>Investors now see your true value</span>
+      <span>Users understand and now have a reason to sign up</span>
+      <span>Something's definitely different at tradeshows</span>
+      <span>All kept as a secret for just <strong>$150</strong></span>
+    </p>
+    <div class="row">
+      <a class="btn" href="#book" data-book>Get started</a>
+      <a class="btn cy" href="#videos">See videos</a>
+    </div>
+  </div>
+</section>
+
+<section id="videos" style="padding-top:0">
+  <div class="wrap grid">
+    <!-- Replace data-src with your own clips. Keep them short, muted and compressed (under 5 MB). -->
+    <div class="tile"><video muted loop playsinline preload="none" data-src="clips/sample-1.mp4" aria-label="MyOps promo video"></video>
+      <div class="ph p1"><span>MyOps<small>clips/sample-1.mp4</small></span></div></div>
+    <div class="tile"><video muted loop playsinline preload="none" data-src="clips/sample-2.mp4" aria-label="Ava HR promo video"></video>
+      <div class="ph p2"><span>Ava HR<small>clips/sample-2.mp4</small></span></div></div>
+    <div class="tile"><video muted loop playsinline preload="none" data-src="clips/sample-3.mp4" aria-label="10X Trading app promo video"></video>
+      <div class="ph p3"><span>10X Trading<small>clips/sample-3.mp4</small></span></div></div>
+    <div class="tile"><video muted loop playsinline preload="none" data-src="clips/sample-4.mp4" aria-label="LawNeeds ad video"></video>
+      <div class="ph p4"><span>LawNeeds<small>clips/sample-4.mp4</small></span></div></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>Does it really work?</h2>
+    <p class="sub">Here's what this founder has to say</p>
+    <p class="quote">We needed an ad for our waitlist campaign, something that really communicates the value of what we've been building. Prince killed it and we had a successful campaign ROI.</p>
+    <div class="who">
+      <div class="avatar" role="img" aria-label="Photo of Steve Okolo"></div>
+      <div><strong>Steve Okolo</strong><span>CEO, Lawneeds</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Start with one.<br>Add more when it works.</h2>
+    <p class="sub">Select one now or pick what you really need before the offer ends</p>
+    <div class="plans">
+      <div class="plan">
+        <div class="amt">$150</div><h3>Get 1 video</h3>
+        <p>Pick any type: explainer, promo, ad, tradeshow or how-to demo.</p>
+        <a class="btn" href="#book" data-book>Request</a>
+      </div>
+      <div class="plan">
+        <div class="amt">$500</div><h3>Get 4 videos</h3>
+        <p>Explainer video, landing page promo, ad and tradeshow video.</p>
+        <a class="btn" href="#book" data-book>Request</a>
+      </div>
+      <div class="plan">
+        <div class="amt">$1,250</div><h3>The full set</h3>
+        <p>All four videos plus five how-to onboarding demo videos.</p>
+        <a class="btn cy" href="#book" data-book>Request</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ai" id="book">
+  <div class="wrap">
+    <h2>Want to use AI instead?</h2>
+    <p class="sub">Well, AI is good, but needs tweaking. The main question is, does your first impression matter to your investors?</p>
+    <a class="btn cy" href="https://calendly.com/theprincetari/product-video-intro-call-clone" data-demo target="_blank" rel="noopener">Get a 5 sec demo</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="social">
+    <a href="mailto:thprincetari@gmail.com?subject=Video%20enquiry" aria-label="Email Primed Studio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5 12 13.5l8.5-6"/></svg>
+    </a>
+    <a href="https://www.instagram.com/princetari_/?hl=en" target="_blank" rel="noopener" aria-label="Primed Studio on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>
+    </a>
+  </div>
+</div></footer>
+
+<script>
+// Booking links (Calendly)
+const BOOKING_URL = "https://calendly.com/theprincetari/product_video_intro_call"; // Get Started + Request buttons
+const DEMO_URL = "https://calendly.com/theprincetari/product-video-intro-call-clone"; // Free 5-sec demo button
+document.querySelectorAll("[data-book]").forEach(a => { a.href = BOOKING_URL; a.target = "_blank"; a.rel = "noopener"; });
+document.querySelectorAll("[data-demo]").forEach(a => { a.href = DEMO_URL; a.target = "_blank"; a.rel = "noopener"; });
+
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const videos = document.querySelectorAll(".tile video");
+videos.forEach(v => {
+  v.muted = true; v.defaultMuted = true; v.loop = true;   // muted + loop so browsers allow autoplay
+  v.addEventListener("loadeddata", () => v.classList.add("ready"));
+  if (reduce) v.controls = true;
+  // Fallback: if a phone blocks autoplay (e.g. Low Power Mode), tapping the tile starts it.
+  v.parentElement.addEventListener("click", () => { if (v.paused && v.getAttribute("src")) v.play().catch(() => {}); });
+});
+// Load clips just before they scroll into view; play while visible, pause when not.
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting){
+      if (!v.getAttribute("src") && v.dataset.src) v.src = v.dataset.src;
+      if (!reduce) v.play().catch(() => {});
+    } else { v.pause(); }
+  });
+}, { rootMargin: "600px 0px", threshold: 0 });
+videos.forEach(v => io.observe(v));
+</script>
+</body>
+</html>
